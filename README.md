@@ -2,7 +2,7 @@
 
 ## 📖 Descrição do Projeto
 
-O **StoreMVP** é um MVP (Minimum Viable Product) de uma loja virtual moderna desenvolvida com as mais recentes tecnologias web. Esta aplicação oferece uma experiência completa de e-commerce, incluindo catálogo de produtos, carrinho de compras, sistema de busca, checkout completo e dashboards administrativos.
+O **StoreMVP** é um MVP (Minimum Viable Product) de uma loja virtual moderna desenvolvida com as mais recentes tecnologias web. Esta aplicação oferece uma experiência completa de e-commerce, incluindo catálogo de produtos, carrinho de compras, sistema de busca, checkout e dashboard administrativa.
 
 O projeto integra com um backend Python/FastAPI para processamento de pedidos e utiliza a [Fake Store API](https://fakestoreapi.com/) para o catálogo de produtos, permitindo demonstrar todas as funcionalidades de um e-commerce real.
 
@@ -20,6 +20,35 @@ O projeto integra com um backend Python/FastAPI para processamento de pedidos e 
 - **[Fake Store API](https://fakestoreapi.com/)** - Catálogo de produtos
 - **[ViaCEP API](https://viacep.com.br/)** - Preenchimento automático de endereço
 - **Backend Python/FastAPI** - Processamento de pedidos
+
+## 🏗️ Arquitetura do Sistema
+
+O StoreMVP utiliza uma arquitetura moderna e escalável com separação clara de responsabilidades:
+
+![Fluxograma da Arquitetura](./fluxograma-arquitetura.jpg)
+
+### 📊 Componentes da Arquitetura
+
+#### **Frontend (Next.js 14)**
+- **React Components**: Interface de usuário componentizada
+- **Context API**: Gerenciamento de estado global (carrinho)
+- **API Routes**: Endpoints internos para integração
+- **TypeScript**: Tipagem estática para maior robustez
+- **Tailwind + shadcn/ui**: Sistema de design consistente
+
+#### **Backend (Python FastAPI)**
+- **FastAPI**: Framework web moderno e rápido
+- **SQLite**: Banco de dados leve para MVP
+- **Modelos relacionais**: Order, OrderItem, Payment
+- **API RESTful**: Endpoints padronizados
+
+#### **Integrações Externas**
+- **FakeStore API**: Catálogo completo de produtos
+- **ViaCEP API**: Validação e preenchimento de endereços
+
+#### **Infraestrutura**
+- **Docker**: Containerização para consistência
+- **Docker Compose**: Orquestração simplificada
 
 ## ✨ Funcionalidades
 
@@ -250,7 +279,7 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalh
 
 ## 👨‍💻 Autor
 
-Desenvolvido com ❤️ para demonstrar as melhores práticas em e-commerce moderno.
+Desenvolvido com ❤️ por Josué Ferreira para demonstrar as melhores práticas em e-commerce moderno.
 
 ---
 
